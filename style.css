@@ -1,0 +1,64 @@
+body{
+  font-family: serif;
+  background:#0d0d1a;
+  color:#fff;
+  text-align:center;
+}
+#hud{
+  margin:10px;
+  background:#111;
+  padding:8px 12px;
+  border-radius:8px;
+  display:inline-block;
+}
+#fire-control{
+  margin:10px auto;
+  background:#111;
+  padding:8px 12px;
+  border-radius:10px;
+  width:fit-content;
+}
+#lab{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-top:10px;
+}
+#ingredients{width:200px;}
+.item{
+  background:#222;
+  margin:8px;
+  padding:10px;
+  border-radius:8px;
+  cursor:grab;
+  border:1px solid #555;
+}
+#cauldron{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:#333;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.5s;
+}
+#steam{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:320px;
+  pointer-events:none;
+}
+.explode{
+  animation:shake .3s infinite;
+  background:#5a0000;
+}
+@keyframes shake{
+  0%{transform:translate(0)}
+  25%{transform:translate(-5px,5px)}
+  50%{transform:translate(5px,-5px)}
+  75%{transform:translate(-5px,-5px)}
+  100%{transform:translate(0)}
+}

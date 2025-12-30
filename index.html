@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virtual Potion Classroom — Brew Veritaserum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🧪 Brew Veritaserum</h1>
+  <div id="hud">⏱️ Time: <span id="time">10</span>s | ⭐ Score: <span id="score">0</span></div>
+  <p id="instruction">Rebus jahe dan tambahkan bulu Jobberknoll</p>
+
+  <div id="fire-control">
+    🔥 Api:
+    <input type="range" id="fire" min="0" max="100" value="50">
+    <span id="fireValue">50</span>°
+  </div>
+
+  <div id="lab">
+    <div id="ingredients">
+      <div class="item" draggable="true" data-item="ginger">🫚 Jahe</div>
+      <div class="item" draggable="true" data-item="jobberknoll">🪶 Jobberknoll</div>
+      <div class="item" draggable="true" data-item="sopophorous">🧴 Sopophorous</div>
+      <div class="item" draggable="true" data-item="beetle">🐞 Mata Kumbang</div>
+      <div class="item" draggable="true" data-item="lovage">🌿 Lovage</div>
+    </div>
+    <div id="cauldron">⚗️<br>KUALI</div>
+  </div>
+
+  <canvas id="steam" width="300" height="300"></canvas>
+  <p id="status"></p>
+
+  <audio id="boilSound" src="boil.mp3"></audio>
+  <audio id="successSound" src="success.mp3"></audio>
+  <audio id="failSound" src="explode.mp3"></audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
